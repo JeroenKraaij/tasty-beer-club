@@ -9,6 +9,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        forest: '#2B4836',
+        navText: "#FFEFBC",
+        navHover: "#E3A1AD",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
