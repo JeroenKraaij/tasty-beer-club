@@ -1,14 +1,12 @@
-import Header from "@/app/components/Header";
 
 
 export default function Home() {
     return (
-        <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-            <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-                <h1 className="text-4xl font-bold text-center sm:text-left">Homepage</h1>
-            </main>
-            <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-            </footer>
+        <div className="container mx-auto py-8">
+            <h1 className="text-4xl font-bold mb-4">Tasty Beer Club</h1>
+            <p className="text-lg text-gray-700">
+                Browse our selection of high-quality products. Find what you need in our webshop.
+            </p>
         </div>
     );
 }
