@@ -1,3 +1,12 @@
+
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Contactpage for help of the Tasty Beer Club",
+    description: "Take contact with us for help",
+};
+
+
 export default function Contact() {
     return (
         <div className="container mx-auto py-8">

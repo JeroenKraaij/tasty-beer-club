@@ -1,3 +1,13 @@
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Doe de smaaktest van de Tasty Beer Club",
+    description: "The taste test of the Tasty Beer Club will bring to the right beer",
+};
+
+
+
+
 export default function Smaaktest() {
     return (
         <div className="container mx-auto py-8">

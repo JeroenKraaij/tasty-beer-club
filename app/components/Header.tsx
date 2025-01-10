@@ -1,8 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import Logo from "@/app/components/ui/Logo";
-import { FaFacebookF, FaTwitter, FaInstagram,} from "react-icons/fa";
 import ShoppingBasket from "@/app/components/ui/ShoppingBasket";
 import SocialIcones from "@/app/components/ui/SocialIcones";
+import {usePathname} from "next/navigation";
+import {clsx} from "clsx";
+import {motion} from "framer-motion";
 
 const routesMenu = [
 
@@ -26,9 +30,11 @@ const routesMenu = [
         name: "Contact",
         path: "/contact",
     }
-    ]
+    ];
 
 export default function Header() {
+    const activePathname = usePathname()
+
     return (
         <header className="flex w-full h-[200px] mx-auto items-center justify-between px-16">
             <Logo
@@ -39,10 +45,21 @@ export default function Header() {
                 width="150"
             />
             <nav className="flex">
-                    <ul className="flex gap-16 font-bold text-lg uppercase text-black">
+                    <ul className="flex gap-16 font-bold text-lg uppercase">
                         {routesMenu.map((route) => (
-                            <li key={route.path} className="hover:text-[#E3A1AD] hover:underline hover:underline-offset-4 hover:decoration-[#E3A1AD] hover:decoration-2 transition">
+                            <li key={route.path}
+                                className={clsx("hover:text-pinkLady relative transition", {
+                                    "text-pinkLady": activePathname === route.path,
+                                    "text-TextColour": activePathname !== route.path,
+                                })}
+                            >
                                 <Link href={route.path}>{route.name}</Link>
+                                {activePathname === route.path && (
+                                    <motion.div
+                                        layoutId="nav-active-link"
+                                        className="bg-pinkLady h-1 w-full absolute  ">
+                                    </motion.div>
+                                )}
                             </li>
                         ))}
                     </ul>

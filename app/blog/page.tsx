@@ -1,3 +1,11 @@
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "The Blog of the Tasty Beer Club",
+    description: "The most famous articles about the beste beers",
+};
+
+
 export default function Blog() {
     return (
         <div className="container mx-auto py-8">

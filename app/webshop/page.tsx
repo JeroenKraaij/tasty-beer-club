@@ -1,3 +1,11 @@
+
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Order the beers in our Tasty Beer Club Shop",
+    description: "But the beers you like and enjoy the taste of the Tasty Beer Club",
+};
+
 export default function Webshop() {
     return (
         <div className="container mx-auto py-8">

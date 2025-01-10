@@ -10,10 +10,14 @@ export default {
     extend: {
       colors: {
         forest: '#2B4836',
-        navText: "#FFEFBC",
-        navHover: "#E3A1AD",
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        grass: '#999E66',
+        sand: '#BE8E66',
+        sun: '#FFEFBC',
+        orange: '#FFD700',
+        pinkLady: '#E3A1AD',
+        TextColour: "#242424",
+        MenuColour: "#242424",
+        background: "#FFF",
       },
     },
   },

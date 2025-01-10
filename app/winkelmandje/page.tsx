@@ -1,3 +1,16 @@
+
+
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Put all your stuff in the Tasty Beer Club Beer Basket",
+    description: "The Beer Basket is your featured taste of beer",
+};
+
+
+
+
+
 export default function Webshop() {
     return (
         <div className="container mx-auto py-8">
