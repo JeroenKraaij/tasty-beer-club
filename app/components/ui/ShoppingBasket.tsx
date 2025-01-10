@@ -13,11 +13,11 @@ export default function ShoppingBasket({
                                  imageSrc = "/TastyBeerClubLogo.svg",
                                  altText = "The Tasty Beer Club logo",
                                  className = "",
-                                 height = "10",
-                                 width = "10",
+                                 height = "100",
+                                 width = "100",
                              }: ShoppingBasketProps) {
     return (
-        <Link href="/card">
+        <Link href="/winkelmandje">
             <div className={`flex items-center gap-3 ${className}`}>
                 {imageSrc && (
                     <Image

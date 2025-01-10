@@ -9,13 +9,13 @@ interface LogoProps {
     width?: number | `${number}` | undefined;
 }
 
-export default function Logo({
-    imageSrc = "/TastyBeerClubLogo.svg",
-    altText = "The Tasty Beer Club logo",
-    className = "",
-    height = 40,
-    width = 40,
-}: LogoProps) {
+export default function Logo ({
+                                           imageSrc = "/TastyBeerClubLogo.svg",
+                                           altText = "The Tasty Beer Club logo",
+                                           className = "",
+                                           height = "250",
+                                           width = "250",
+                                       }: LogoProps) {
     return (
         <Link href="/">
             <div className={`flex items-center gap-3 ${className}`}>

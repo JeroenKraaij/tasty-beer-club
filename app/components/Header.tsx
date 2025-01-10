@@ -2,6 +2,31 @@ import Link from "next/link";
 import Logo from "@/app/components/ui/Logo";
 import { FaFacebookF, FaTwitter, FaInstagram,} from "react-icons/fa";
 import ShoppingBasket from "@/app/components/ui/ShoppingBasket";
+import SocialIcones from "@/app/components/ui/SocialIcones";
+
+const routesMenu = [
+
+    {
+        name: "Home",
+        path: "/",
+    },
+    {
+        name: "Smaaktest",
+        path: "/smaaktest",
+    },
+    {
+        name: "Webshop",
+        path: "/webshop",
+    },
+    {
+        name: "Blog",
+        path: "/blog",
+    },
+    {
+        name: "Contact",
+        path: "/contact",
+    }
+    ]
 
 export default function Header() {
     return (
@@ -9,75 +34,29 @@ export default function Header() {
             <Logo
                 imageSrc="/logoTastyBeerClub.svg"
                 altText="The Tasty Beer Club logo"
-                height="60"
-                width="120"
+                className="bg-white"
+                height="150"
+                width="150"
             />
-            <nav className="flex bg-amber-600">
-                    <ul className="flex gap-8 font-bold text-lg uppercase text-black">
-                        <li key="smaaktest">
-                            <Link
-                                href="/smaaktest"
-                                className="hover:text-[#E3A1AD] hover:underline hover:underline-offset-4 hover:decoration-[#E3A1AD] hover:decoration-4"
-                            >
-                                Smaaktest
-                            </Link>
-                        </li>
-                        <li key="webshop">
-                            <Link
-                                href="/webshop"
-                                className="hover:text-[#E3A1AD] hover:underline hover:underline-offset-4 hover:decoration-[#E3A1AD] hover:decoration-4"
-                            >
-                                Webshop
-                            </Link>
-                        </li>
-                        <li key="blog">
-                            <Link
-                                href="/blog"
-                                className="hover:text-[#E3A1AD] hover:underline hover:underline-offset-4 hover:decoration-[#E3A1AD] hover:decoration-4"
-                            >
-                                Blog
-                            </Link>
-                        </li>
-                        <li key="contact">
-                            <Link
-                                href="/contact"
-                                className="hover:text-[#E3A1AD] hover:underline hover:underline-offset-4 hover:decoration-[#E3A1AD] hover:decoration-4"
-                            >
-                                Contact
-                            </Link>
-                        </li>
+            <nav className="flex">
+                    <ul className="flex gap-16 font-bold text-lg uppercase text-black">
+                        {routesMenu.map((route) => (
+                            <li key={route.path} className="hover:text-[#E3A1AD] hover:underline hover:underline-offset-4 hover:decoration-[#E3A1AD] hover:decoration-2 transition">
+                                <Link href={route.path}>{route.name}</Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
-                <div className="flex items-center gap-4 text-black">
-                    <a
-                        href="https://facebook.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaFacebookF size={30} />
-                    </a>
-                    <a
-                        href="https://twitter.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaTwitter size={30} />
-                    </a>
-                    <a
-                        href="https://instagram.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaInstagram size={30} />
-                    </a>
-                        <ShoppingBasket
-                            imageSrc="/Winkelmandje.svg"
-                            altText="Winkelmandje"
-                            className="bg-amber-600"
-                            height="60"
-                            width="60"
-                        />
-                </div>
+            <div className="flex gap-8">
+                <SocialIcones/>
+                <ShoppingBasket
+                    imageSrc="/Winkelmandje.svg"
+                    altText="Winkelmandje"
+                    className="bg-[#999E66] p-1 rounded-full"
+                    height="100"
+                    width="100"
+                />
+            </div>
         </header>
     );
 }
