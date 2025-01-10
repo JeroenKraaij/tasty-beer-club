@@ -1,7 +1,7 @@
 
 import { FaFacebookF, FaTwitter, FaInstagram,} from "react-icons/fa";
 
-export default function SocialIcones() {
+export default function SocialIcons() {
     return (
         <div className="flex items-center gap-8 text-black">
             <a

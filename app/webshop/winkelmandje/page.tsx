@@ -1,6 +1,7 @@
 
 
 import type {Metadata} from "next";
+import H1 from "@/app/components/htmlHeadingTag/h1";
 
 export const metadata: Metadata = {
     title: "Put all your stuff in the Tasty Beer Club Beer Basket",
@@ -8,13 +9,10 @@ export const metadata: Metadata = {
 };
 
 
-
-
-
 export default function Webshop() {
     return (
         <div className="container mx-auto py-8">
-            <h1 className="text-4xl font-bold mb-4">Winkelmandje</h1>
+            <H1>Winkelmandje</H1>
             <p className="text-lg text-gray-700">
                 Browse our selection of high-quality products. Find what you need in our webshop.
             </p>

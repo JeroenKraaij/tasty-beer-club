@@ -17,7 +17,7 @@ export default function ShoppingBasket({
                                  width = "100",
                              }: ShoppingBasketProps) {
     return (
-        <Link href="/winkelmandje">
+        <Link href="/webshop/winkelmandje">
             <div className={`flex items-center gap-3 ${className}`}>
                 {imageSrc && (
                     <Image

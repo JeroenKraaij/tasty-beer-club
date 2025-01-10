@@ -1,5 +1,6 @@
 
 import type {Metadata} from "next";
+import H1 from "@/app/components/htmlHeadingTag/h1";
 
 export const metadata: Metadata = {
     title: "Contactpage for help of the Tasty Beer Club",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 export default function Contact() {
     return (
         <div className="container mx-auto py-8">
-            <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
+            <H1>Contact Us</H1>
             <p className="text-lg text-gray-700">
                 Get in touch with us! Fill out the form below or contact us directly at:
                 <br />
