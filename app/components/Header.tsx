@@ -1,25 +1,19 @@
 import Link from "next/link";
 import Logo from "@/app/components/ui/Logo";
-import { FaFacebookF, FaTwitter, FaInstagram, FaShoppingBasket } from "react-icons/fa"; // For social and basket icons
+import { FaFacebookF, FaTwitter, FaInstagram,} from "react-icons/fa";
+import ShoppingBasket from "@/app/components/ui/ShoppingBasket";
 
 export default function Header() {
     return (
-        <header className="w-full bg-forest text-white h-[200px]">
-            <div className="container mx-auto h-full flex items-center justify-between px-4">
-                {/* Logo Section */}
-                <div className="flex items-center">
-                    <Logo
-                        imageSrc="/logoTastyBeerClub.svg"
-                        altText="The Tasty Beer Club logo"
-                        text=""
-                        height="10rem"
-                        width="10rem"
-                    />
-                </div>
-
-                {/* Navigation Section */}
-                <nav>
-                    <ul className="flex gap-8 font-bold text-lg uppercase text-[#FFEFBC]">
+        <header className="flex w-full h-[200px] mx-auto items-center justify-between px-16">
+            <Logo
+                imageSrc="/logoTastyBeerClub.svg"
+                altText="The Tasty Beer Club logo"
+                height="60"
+                width="120"
+            />
+            <nav className="flex bg-amber-600">
+                    <ul className="flex gap-8 font-bold text-lg uppercase text-black">
                         <li key="smaaktest">
                             <Link
                                 href="/smaaktest"
@@ -54,44 +48,36 @@ export default function Header() {
                         </li>
                     </ul>
                 </nav>
-
-                {/* Social Media and Shopping Basket */}
-                <div className="flex items-center gap-4">
-                    {/* Social Media Icons */}
+                <div className="flex items-center gap-4 text-black">
                     <a
                         href="https://facebook.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#FFEFBC] hover:text-[#E3A1AD]"
                     >
-                        <FaFacebookF size={20} />
+                        <FaFacebookF size={30} />
                     </a>
                     <a
                         href="https://twitter.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#FFEFBC] hover:text-[#E3A1AD]"
                     >
-                        <FaTwitter size={20} />
+                        <FaTwitter size={30} />
                     </a>
                     <a
                         href="https://instagram.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#FFEFBC] hover:text-[#E3A1AD]"
                     >
-                        <FaInstagram size={20} />
+                        <FaInstagram size={30} />
                     </a>
-
-                    {/* Shopping Basket Icon */}
-                    <Link
-                        href="/cart"
-                        className="text-[#FFEFBC] hover:text-[#E3A1AD] flex items-center"
-                    >
-                        <FaShoppingBasket size={24} />
-                    </Link>
+                        <ShoppingBasket
+                            imageSrc="/Winkelmandje.svg"
+                            altText="Winkelmandje"
+                            className="bg-amber-600"
+                            height="60"
+                            width="60"
+                        />
                 </div>
-            </div>
         </header>
     );
 }

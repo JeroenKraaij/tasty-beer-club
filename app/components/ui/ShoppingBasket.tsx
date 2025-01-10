@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-interface LogoProps {
+interface ShoppingBasketProps {
     imageSrc?: string;
     altText?: string;
     className?: string;
@@ -9,15 +9,15 @@ interface LogoProps {
     width?: number | `${number}` | undefined;
 }
 
-export default function Logo({
-    imageSrc = "/TastyBeerClubLogo.svg",
-    altText = "The Tasty Beer Club logo",
-    className = "",
-    height = 40,
-    width = 40,
-}: LogoProps) {
+export default function ShoppingBasket({
+                                 imageSrc = "/TastyBeerClubLogo.svg",
+                                 altText = "The Tasty Beer Club logo",
+                                 className = "",
+                                 height = "10",
+                                 width = "10",
+                             }: ShoppingBasketProps) {
     return (
-        <Link href="/">
+        <Link href="/card">
             <div className={`flex items-center gap-3 ${className}`}>
                 {imageSrc && (
                     <Image
