@@ -1,6 +1,6 @@
-import Logo from "@/app/components/ui/Logo";
-import ShoppingBasket from "@/app/components/ui/ShoppingBasket";
-import SocialIcons from "@/app/components/ui/SocialIcons";
+import Logo from "@/app/components/ui/logo";
+import ShoppingBasket from "@/app/components/ui/shopping-basket";
+import SocialIcons from "@/app/components/ui/social-icons";
 import Navigation from "@/app/components/Navigation";
 
 export default function Header() {
