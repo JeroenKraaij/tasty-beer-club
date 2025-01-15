@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Smaaktest() {
     return (
         <div className="container mx-auto py-8">
-            <H1>Smaaktest</H1>
+            <H1 className="">Smaaktest</H1>
             <p className="text-lg text-gray-700">
                 Welcome to the Smaaktest page! Here you can take our taste test and discover your favorite flavors.
             </p>

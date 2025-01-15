@@ -1,10 +1,10 @@
 "use client"
 
 import React from 'react'
-import {clsx} from "clsx";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import {usePathname} from "next/navigation";
+import {cn} from "@/lib/utils";
 
 const routesMenu = [
 
@@ -38,7 +38,7 @@ export default function Navigation() {
             <ul className="flex gap-16 font-bold text-lg uppercase">
                 {routesMenu.map((route) => (
                     <li key={route.path}
-                        className={clsx("hover:text-pinkLady relative transition", {
+                        className={cn("hover:text-pinkLady relative transition", {
                             "text-pinkLady": activePathname === route.path,
                             "text-TextColour": activePathname !== route.path,
                         })}

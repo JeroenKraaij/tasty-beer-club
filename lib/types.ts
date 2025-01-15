@@ -1,6 +1,8 @@
 
 export type BeerType = {
+
     id: string;
+    slug: string
     name: string;
     brand: string;
     category: string;
@@ -16,6 +18,6 @@ export type BeerType = {
     glassware: string;
     taste: string;
     price: number;
-    image_url: string;
+    image: string;
     inStock: number;
 }

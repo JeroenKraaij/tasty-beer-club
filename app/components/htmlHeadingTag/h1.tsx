@@ -1,9 +1,12 @@
 import React from 'react'
+import {cn} from "@/lib/utils";
 
 type H1Props = {
     children: React.ReactNode;
+    className?: string;
 };
 
-export default function H1({children}: H1Props ) {
-    return <h1 className="text-4xl font-bold mb-4">{children}</h1>
+export default function H1({children, className}: H1Props ) {
+    return ( <h1 className={cn("text-4xl font-bold mb-4", className)}>{children}</h1>
+    )
 }

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import H1 from "@/app/components/htmlHeadingTag/h1";
-import Image from "next/image";
 import { BeerType } from "@/lib/types";
 import BeerList from "@/app/components/beerList";
 
@@ -11,18 +10,17 @@ export const metadata: Metadata = {
 
 export default async function Webshop() {
     try {
-        const response = await fetch(
+        const response = await fetch (
             "http://localhost:8080/api/v1/beers", {
             method: "GET",
             headers: {"Content-Type": "application/json",
             },
         });
-
         if (response.ok) {
             const beers: BeerType[] = await response.json();
             return (
                 <section className="container mx-auto py-8">
-                    <H1>Webshop</H1>
+                    <H1 className="text-emerald-600">Webshop</H1>
                     <p className="text-lg text-gray-700">
                         Browse our selection of high-quality beers. Find your favorite taste in our webshop.
                     </p>
@@ -36,7 +34,7 @@ export default async function Webshop() {
         console.error("Error fetching data:", error);
         return (
             <div className="container mx-auto py-8">
-                <H1>Webshop</H1>
+                <H1 className="">Webshop</H1>
                 <p className="text-lg text-red-600">
                     Failed to load beers. Please try again later.
                 </p>
