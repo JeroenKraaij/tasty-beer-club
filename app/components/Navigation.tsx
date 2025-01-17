@@ -30,12 +30,16 @@ const routesMenu = [
     }
 ];
 
-export default function Navigation() {
+interface NavigationProps {
+    className?: string;
+}
+
+export default function Navigation( {className}: NavigationProps) {
     const activePathname = usePathname()
 
     return (
-        <nav className="flex">
-            <ul className="flex gap-16 font-bold text-lg uppercase">
+        <nav>
+            <ul className={className}>
                 {routesMenu.map((route) => (
                     <li key={route.path}
                         className={cn("hover:text-pinkLady relative transition", {

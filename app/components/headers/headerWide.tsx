@@ -3,10 +3,10 @@ import ShoppingBasket from "@/app/components/ui/shopping-basket";
 import SocialIcons from "@/app/components/ui/social-icons";
 import Navigation from "@/app/components/Navigation";
 
-export default function Header() {
+export default function HeaderWide() {
 
     return (
-        <header className="flex w-full h-[200px] mx-auto items-center justify-between px-16">
+        <header className="w-full bg-white shadow-md hidden md:flex justify-between items-center px-6 py-4 h-[200px]">
             <Logo
                 imageSrc="/logoTastyBeerClub.svg"
                 altText="The Tasty Beer Club logo"
@@ -14,7 +14,7 @@ export default function Header() {
                 height="150"
                 width="150"
             />
-            <Navigation/>
+            <Navigation className="flex space-x-6 gap-16 font-bold text-lg uppercase" />
             <div className="flex gap-8">
                 <SocialIcons/>
                 <ShoppingBasket
@@ -28,3 +28,4 @@ export default function Header() {
         </header>
     );
 }
+
