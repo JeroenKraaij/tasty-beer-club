@@ -11,7 +11,7 @@ export default function BeerList( {beers}: BeerListProps) {
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                 {beers.map((beer: BeerType) => {
                     return (
-                        <li key={beer.id} className="border rounded-lg p-4 shadow flex flex-col items-center">
+                        <li key={beer.id} className="flex flex-col border rounded-lg shadow  items-center p-8 ">
                             <BeerCard beer={beer} />
                         </li>
                     );
