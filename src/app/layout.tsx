@@ -1,16 +1,13 @@
+import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Footer from "@/app/components/Footer";
-import Header from "@/app/components/headers/Header";
-
+import "./styles/globals.css";
 
 const inter = Inter({
     variable: "--font-inter-sans",
     subsets: ["latin"],
     display: "swap",
 });
-
 export const metadata: Metadata = {
     title: "The Tasty Beer Club Homepage",
     description: "Order the most delicious beer in the world",
@@ -19,14 +16,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" className={`${inter.className} text-TextColour`}>
-        <body className="flex flex-col min-h-screen bg-background">
-            <Header/>
-                <main className="flex flex-col flex-grow max-w-8xl px-4 sm:px-6 lg:px-8">
-                {children}
-                </main>
-            <Footer/>
-        </body>
+        <html lang="en" className={inter.className}>
+            <body>{children}</body>
         </html>
     );
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import H1 from "@/app/components/htmlHeadingTag/h1";
+import H1 from "@//app/components/htmlHeadingTag/h1";
 import { BeerType } from "@/lib/types";
 import BeerList from "@/app/components/beerList";
 

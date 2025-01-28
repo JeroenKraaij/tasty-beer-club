@@ -34,7 +34,7 @@ interface NavigationProps {
     className?: string;
 }
 
-export default function Navigation( {className}: NavigationProps) {
+export default function WebsiteNav({className}: NavigationProps) {
     const activePathname = usePathname()
 
     return (
