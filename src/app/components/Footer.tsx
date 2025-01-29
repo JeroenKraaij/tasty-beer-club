@@ -1,10 +1,14 @@
+import Image from "next/image";
+
 export default function Footer() {
     return (
         <footer className="w-full text-white">
             <div className="w-full mx-auto bg-[#999E66] flex justify-center items-center py-16">
-                <img
+                <Image
                     src="/TastyBeerClub-Background-Image-footer.webp"
                     alt="Footer Image"
+                    width={1920}
+                    height={1080}
                     className="max-h-72 object-contain"
                 />
             </div>

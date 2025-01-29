@@ -1,5 +1,6 @@
 import { BeerType } from "@/lib/types";
 import H1 from "@/app/components/ui/h1";
+import Image from "next/image";
 
 type BeerPageDisplayProps = {
     params: { id: string };
@@ -24,7 +25,7 @@ export default async function ProductPage({ params }: BeerPageDisplayProps) {
             return (
                 <section className="beer-details-page max-w-3xl mx-auto">
                     <div className="beer-card">
-                        <img src={beer.image} alt={beer.name} className="beer-image" />
+                        <Image src={beer.image} alt={beer.name} className="beer-image" />
                         <div className="beer-details">
                             <h2>{beer.name}</h2>
                             <p><strong>Brand:</strong> {beer.brand}</p>
