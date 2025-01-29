@@ -4,7 +4,7 @@ import H1 from "@/app/components/htmlHeadingTag/h1";
 
 export default function Home() {
     return (
-        <div className=" w-full py-8">
+        <div className="container mx-auto py-8">
             <HeroBanner />
             <H1>Tasty Beer Club</H1>
             <p className="text-lg text-gray-700">

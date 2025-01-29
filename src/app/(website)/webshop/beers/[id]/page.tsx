@@ -1,5 +1,5 @@
 import { BeerType } from "@/lib/types";
-import H1 from "@/src/login/components/htmlHeadingTag/h1";
+import H1 from "@/app/components/htmlHeadingTag/h1";
 
 type BeerPageDisplayProps = {
     params: { id: string };

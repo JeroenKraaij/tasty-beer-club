@@ -20,7 +20,7 @@ export default async function Webshop() {
             const beers: BeerType[] = await response.json();
             return (
                 <section className="container mx-auto py-8">
-                    <H1 className="text-emerald-600">Webshop</H1>
+                    <H1>Webshop</H1>
                     <p className="text-lg text-gray-700">
                         Browse our selection of high-quality beers. Find your favorite taste in our webshop.
                     </p>

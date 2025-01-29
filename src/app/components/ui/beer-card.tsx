@@ -11,7 +11,7 @@ type BeerCardProps = {
 export default function BeerCard({ beer }: BeerCardProps) {
     console.log(beer.id);
     return (
-        <Link href={`/src/app/(website)/webshop/beers/${beer.id}`}>
+        <Link href={`/webshop/beers/${beer.id}`}>
             <div className="flex flex-col items-center transition hover:scale-105 active:scale-[1.02]">
                 <Image
                     src={beer.image}

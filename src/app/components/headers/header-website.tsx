@@ -10,7 +10,7 @@ export default function HeaderWebsite() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="w-full bg-white shadow-md flex flex-col lg:flex-row lg:justify-between lg:items-center px-4 lg:px-6 py-4">
+        <header className="w-full shadow-md flex flex-col lg:flex-row lg:justify-between lg:items-center px-4 lg:px-6 py-4">
             <div className="flex justify-between items-center w-full lg:w-auto">
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -34,7 +34,7 @@ export default function HeaderWebsite() {
                 <Logo
                     imageSrc="/logoTastyBeerClub.svg"
                     altText="The Tasty Beer Club logo"
-                    className="bg-white"
+                    className="lg:hidden md:block bg-white"
                     height="150"
                     width="150"
                 />
@@ -56,14 +56,21 @@ export default function HeaderWebsite() {
                 </div>
             )}
 
-            <div className="hidden lg:flex justify-between items-center w-full">
-                <WebsiteNav className="flex space-x-6 gap-16 font-bold text-lg uppercase" />
+            <div className="hidden gap-8 lg:flex items-center justify-between  w-full">
+                <Logo
+                    imageSrc="/logoTastyBeerClub.svg"
+                    altText="The Tasty Beer Club logo"
+                    className="bg-white"
+                    height="150"
+                    width="150"
+                />
+                <WebsiteNav className="flex space-x-6 gap-16 font-bold text-lg uppercase flex-none" />
                 <div className="flex gap-8">
                     <SocialMedia />
                     <ShoppingBasket
                         imageSrc="/Winkelmandje.svg"
                         altText="Winkelmandje"
-                        className="bg-[#999E66] p-1 rounded-full"
+                        className="bg-[#999E66] p-1 rounded-full flex-none"
                         height="100"
                         width="100"
                     />
