@@ -1,5 +1,5 @@
 import HeroBanner from "@/app/components/HeroBanner";
-import H1 from "@/app/components/htmlHeadingTag/h1";
+import H1 from "@/app/components/ui/h1";
 
 
 export default function Home() {

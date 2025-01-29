@@ -1,7 +1,7 @@
 
 
 import type {Metadata} from "next";
-import H1 from "@/app/components/htmlHeadingTag/h1";
+import H1 from "@/app/components/ui/h1";
 
 export const metadata: Metadata = {
     title: "Put all your stuff in the Tasty Beer Club Beer Basket",
