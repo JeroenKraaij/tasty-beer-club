@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Logo from "@/app/components/ui/logo";
-import WebsiteNav from "@/app/components/navigation/website-nav";
 import SocialMedia from "@/app/components/ui/social-icons";
 import ShoppingBasket from "@/app/components/ui/shopping-basket";
 import DashboardNav from "@/app/components/navigation/dashboard-nav";
